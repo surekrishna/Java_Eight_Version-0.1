@@ -4,7 +4,9 @@
 1. Lambda Expression
 
 2. Functional Interface SAM(Functional interface should contain single abstract method)
+
     Existing Functional Interface 
+    
     a. Runnable(run())
     b. Callable(call())
     c. Comparable(compareTo())
