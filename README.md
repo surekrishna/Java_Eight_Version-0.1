@@ -39,24 +39,42 @@
 7. Streams
 
       a. stream()
+      
       b. filter(Predicate<T> p)
+    
       c. map(Function<T,U> f)
+      
       d. collect(Collectors.toList())
+      
       e. count()
+      
       f. min(Comparator c)
+      
       g. max(Comparator c)
+      
       h. sorted - default sorting 
+      
       i. sorted(Comparator c) - customized sorting
+      
       j. forEach()
+      
       k. toArray()  
+      
       l. Stream.of()
   
 8. Date & Time API (Joda time API)
 
       a. LocalDate
+      
       b. LocalTime
+      
       c. LocalDateTime
+      
       d. Year
+      
       e. Period
+      
       f. ZoneId
+      
       g. ZonedDateTime
+      
