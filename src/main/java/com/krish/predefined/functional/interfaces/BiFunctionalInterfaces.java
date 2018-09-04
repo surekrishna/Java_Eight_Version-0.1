@@ -28,8 +28,8 @@ public class BiFunctionalInterfaces {
 		for(Studentt student: stuList){
 			System.out.println(student);
 		}		
-		Emplooye e1 = new Emplooye(1,"John",1300);
-		TimeSheet t1 = new TimeSheet(1,25);
+		var e1 = new Emplooye(1,"John",1300);
+		var t1 = new TimeSheet(1,25);
 		BiFunction<Emplooye,TimeSheet,Double> sal = (e,t) -> e.getDailyWage() * t.getDays();
 		System.out.println("Calculating Employee monthly sal using daily wage and Woring days :: ");
 		System.out.println("Salary :: "+sal.apply(e1, t1));

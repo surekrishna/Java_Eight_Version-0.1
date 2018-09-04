@@ -6,7 +6,7 @@ public class defaultMethodAmbiguityMultipleInheritance implements Left, Right {
 		System.out.println("My own implementation");
 	}
 	public static void main(String[] args) {
-		defaultMethodAmbiguityMultipleInheritance dai = new defaultMethodAmbiguityMultipleInheritance();
+		var dai = new defaultMethodAmbiguityMultipleInheritance();
 		dai.m1();
 	}
 
@@ -18,7 +18,7 @@ class defaultMethodAmbiguityMultipleInheritance1 implements Left, Right {
 		Left.super.m1();
 	}
 	public static void main(String[] args) {
-		defaultMethodAmbiguityMultipleInheritance1 dai1 = new defaultMethodAmbiguityMultipleInheritance1();
+		var dai1 = new defaultMethodAmbiguityMultipleInheritance1();
 		dai1.m1();
 	}
 
@@ -30,7 +30,7 @@ class defaultMethodAmbiguityMultipleInheritance2 implements Left, Right {
 		Right.super.m1();
 	}
 	public static void main(String[] args) {
-		defaultMethodAmbiguityMultipleInheritance2 dai2 = new defaultMethodAmbiguityMultipleInheritance2();
+		var dai2 = new defaultMethodAmbiguityMultipleInheritance2();
 		dai2.m1();
 	}
 

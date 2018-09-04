@@ -7,16 +7,16 @@ import java.util.function.Predicate;
 public class PredicateFunctionalInterfaceEmployee {
 	
 	public static void populateEmployees(List<Employee> eList){
-		Employee e1 = new Employee("John","CEO",1000000,"Bangalore");
-		Employee e2 = new Employee("Jack","Manager",40000,"Hyderabad");
-		Employee e3 = new Employee("Linda","Develper",23000,"Hyderabad");
-		Employee e4 = new Employee("Martin","Developer",25000,"Hyderabad");
-		Employee e5 = new Employee("James","Module Lead",500000,"Hyderabad");
-		Employee e6 = new Employee("Sun","Manager",800000,"Bangalore");
-		Employee e7 = new Employee("Venus","QA Manager",900000,"Bangalore");
-		Employee e8 = new Employee("Mars","Developer",20000,"Bangalore");
-		Employee e9 = new Employee("Sam","Lead",40000,"Bangalore");
-		Employee e10 = new Employee("Rita","QA",30000,"Hyderabad");
+		var e1 = new Employee("John","CEO",1000000,"Bangalore");
+		var e2 = new Employee("Jack","Manager",40000,"Hyderabad");
+		var e3 = new Employee("Linda","Develper",23000,"Hyderabad");
+		var e4 = new Employee("Martin","Developer",25000,"Hyderabad");
+		var e5 = new Employee("James","Module Lead",500000,"Hyderabad");
+		var e6 = new Employee("Sun","Manager",800000,"Bangalore");
+		var e7 = new Employee("Venus","QA Manager",900000,"Bangalore");
+		var e8 = new Employee("Mars","Developer",20000,"Bangalore");
+		var e9 = new Employee("Sam","Lead",40000,"Bangalore");
+		var e10 = new Employee("Rita","QA",30000,"Hyderabad");
 		eList.add(e1);
 		eList.add(e2);
 		eList.add(e3);
@@ -30,7 +30,7 @@ public class PredicateFunctionalInterfaceEmployee {
 	}
 	
 	public static void displayEmployees(List<Employee> eList, Predicate<Employee> p){
-		for(Employee e: eList){
+		for(var e: eList){
 			if(p.test(e)) System.out.println(e);
 		}
 		
@@ -64,8 +64,8 @@ public class PredicateFunctionalInterfaceEmployee {
 		System.out.println("isEqual = krish :: "+sequal.test("krish"));
 		System.out.println("isEqual = krish :: "+sequal.test("krishna"));
 		Predicate<Employee> oequal = Predicate.isEqual(new Employee("Krish","CEO",1000000,"Bangalore"));
-		Employee e1 = new Employee("Krish","CEO",1000000,"Bangalore");
-		Employee e2 = new Employee("Neetu","QA Manager",900000,"Bangalore");
+		var e1 = new Employee("Krish","CEO",1000000,"Bangalore");
+		var e2 = new Employee("Neetu","QA Manager",900000,"Bangalore");
 		System.out.println("Display two objects are equal or not(To do need to ovveride equals method in pojo)");
 		System.out.println("isEqual = CEO :: "+oequal.test(e1));
 		System.out.println("isEqual = CEO :: "+oequal.test(e2));

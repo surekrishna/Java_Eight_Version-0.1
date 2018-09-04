@@ -10,10 +10,10 @@ public class ConsumerFunctionalInterface {
 	
 	public static List<Movie> getMoviesList(){
 		List<Movie> mList = new ArrayList<>();
-		Movie m1 = new Movie("Bahubali", "Prabhas", "Anushka", "RajaMouli");
-		Movie m2 = new Movie("Race Gurram", "Bunny", "Shruthi Hasan", "Surender Reddy");
-		Movie m3 = new Movie("Business", "Mahesh", "Kajal", "Puri Jaganath");
-		Movie m4 = new Movie("Tammudu", "Pawan Kalyan", "Preeti Jangani", "Arun Prasad");
+		var m1 = new Movie("Bahubali", "Prabhas", "Anushka", "RajaMouli");
+		var m2 = new Movie("Race Gurram", "Bunny", "Shruthi Hasan", "Surender Reddy");
+		var m3 = new Movie("Business", "Mahesh", "Kajal", "Puri Jaganath");
+		var m4 = new Movie("Tammudu", "Pawan Kalyan", "Preeti Jangani", "Arun Prasad");
 		
 		mList.add(m1);
 		mList.add(m2);
@@ -26,11 +26,11 @@ public class ConsumerFunctionalInterface {
 	public static List<Student> getStudentsList(){
 		List<Student> sList = new ArrayList<>();
 		
-		Student s1 = new Student("Bunny", 73);
-		Student s2 = new Student("Sunny", 81);
-		Student s3 = new Student("Nimmy", 64);
-		Student s4 = new Student("Johnny", 31);
-		Student s5 = new Student("Honey", 26);
+		var s1 = new Student("Bunny", 73);
+		var s2 = new Student("Sunny", 81);
+		var s3 = new Student("Nimmy", 64);
+		var s4 = new Student("Johnny", 31);
+		var s5 = new Student("Honey", 26);
 		
 		sList.add(s1);
 		sList.add(s2);
@@ -55,7 +55,7 @@ public class ConsumerFunctionalInterface {
 			System.out.println();
 		};
 		List<Movie> mv = getMoviesList();
-		for(Movie m: mv){
+		for(var m: mv){
 			pMovie.accept(m);
 		}
 		
@@ -83,7 +83,7 @@ public class ConsumerFunctionalInterface {
 			System.out.println();
 		};
 		System.out.println("Functional Interfaces - Predicate,Function,Consumer Example :: ");
-		for(Student s: sList){
+		for(var s: sList){
 			if(geMarks.test(s)){
 				display.accept(s);
 			}
@@ -93,10 +93,10 @@ public class ConsumerFunctionalInterface {
 		Consumer<Moviee> c2 = movie -> System.out.println("Movie "+movie.getName()+" just released and talk is "+movie.getResult()+".");
 		Consumer<Moviee> c3 = movie -> System.out.println("Movie "+movie.getName()+" is stroing in database.");
 		Consumer<Moviee> cChain = c1.andThen(c2).andThen(c3);
-		Moviee m1 = new Moviee("Bahubali", "Hit");
+		var m1 = new Moviee("Bahubali", "Hit");
 		cChain.accept(m1);
 		System.out.println();
-		Moviee m2 = new Moviee("Spyder", "Flop");
+		var m2 = new Moviee("Spyder", "Flop");
 		cChain.accept(m2);
 	}
 

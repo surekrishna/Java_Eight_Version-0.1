@@ -14,20 +14,20 @@ public class JodaDateTime {
 
 	public static void main(String[] args) {
 		
-		LocalDate date = LocalDate.now();		
+		var date = LocalDate.now();		
 		System.out.println("Printing Current LocalDate :: "+date);
 		System.out.println("Printing Current LocalDate in (MM/dd/yyyy) format :: "+date.getMonthValue()+"/"+date.getDayOfMonth()+"/"+date.getYear());
 		System.out.println("Printing DayOfMonth :: "+date.getDayOfMonth());
 		System.out.println("Printing MonthValue :: "+date.getMonthValue());
 		System.out.println("Printing Year Value :: "+date.getYear());
 		System.out.println("Printing Day of Week :: "+date.getDayOfWeek());
-		LocalTime time = LocalTime.now();
+		var time = LocalTime.now();
 		System.out.println("Printing Current LocalTime :: "+time);
 		System.out.println("Printing Hours Value :: "+time.getHour());
 		System.out.println("Printing Minuites Value :: "+time.getMinute());
 		System.out.println("Printing Secondss Value :: "+time.getSecond());
 		System.out.println("Printing Nano Value :: "+time.getNano());
-		LocalDateTime dt = LocalDateTime.now();
+		var dt = LocalDateTime.now();
 		System.out.println("Printing Current LocalDateTime :: "+dt);
 		System.out.println("Printing DayOfMonth :: "+dt.getDayOfMonth());
 		System.out.println("Printing MonthValue :: "+dt.getMonthValue());
@@ -37,31 +37,31 @@ public class JodaDateTime {
 		System.out.println("Printing Seconds Value :: "+dt.getSecond());
 		System.out.println("Printing Nano Value :: "+dt.getNano());
 		System.out.println("Printing Particular Date using LocalDateTime factory method ::");
-		LocalDateTime dt1 = LocalDateTime.of(1995, Month.MAY,28,12,45);
+		var dt1 = LocalDateTime.of(1995, Month.MAY,28,12,45);
 		System.out.println(dt1);
 		System.out.println("Printing After 6 Months :: "+dt1.plusMonths(6));
 		System.out.println("Printing Before 6 Months :: "+dt1.minusMonths(6));
 		System.out.println("Calculating Age from the birthday to todays day using Period ::");
-		LocalDate bDate = LocalDate.of(1989, 10, 24);
+		var bDate = LocalDate.of(1989, 10, 24);
 		Period p = Period.between(bDate, date);
 		System.out.printf("Your age is %d years, %d months, %d days.",p.getYears(),p.getMonths(),p.getDays());
 		System.out.println("Calculating No.of days to till Death Day :: ");
-		LocalDate dDay = LocalDate.of(1989+60, 10, 24);
-		Period noDay = Period.between(date, dDay);	
+		var dDay = LocalDate.of(1989+60, 10, 24);
+		var noDay = Period.between(date, dDay);	
 		System.out.printf("You will be on earth only %d days, Hurry up to do more important thing only!",noDay.getYears()*365+noDay.getMonths()*30+noDay.getDays());
 		System.out.println("ZoneId and ZoneDateTime Examples :: ");
-		ZoneId zone = ZoneId.systemDefault();
+		var zone = ZoneId.systemDefault();
 		System.out.println("Printing Current Zone :: "+zone);
-		ZoneId la = ZoneId.of("America/Los_Angeles");
+		var la = ZoneId.of("America/Los_Angeles");
 		System.out.println("ZoneId of Los_Angels :: "+la);
-		ZonedDateTime laDate = ZonedDateTime.now(la);
+		var laDate = ZonedDateTime.now(la);
 		System.out.println("ZonedDateTime Local Date of Los_Angeles :: "+laDate);
 		System.out.println();
 		System.out.println("Checking Entered year is leap year or not :: ");
-		Scanner sc = new Scanner(System.in);
+		var sc = new Scanner(System.in);
 		System.out.println("Enter Year :: ");
 		int y = sc.nextInt();
-		Year year = Year.of(y);
+		var year = Year.of(y);
 		if(year.isLeap()){
 			System.out.printf("%d year is leap year.",year.getValue());
 		}else{

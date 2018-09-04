@@ -14,7 +14,7 @@ public class AnonymousInnerClassThisExampleLambda {
 	}
 	
 	public static void main(String[] args) {
-		AnonymousInnerClassThisExampleLambda a = new AnonymousInnerClassThisExampleLambda();
+		var a = new AnonymousInnerClassThisExampleLambda();
 		a.m2();
 
 	}

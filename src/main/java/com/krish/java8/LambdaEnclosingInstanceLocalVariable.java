@@ -15,7 +15,7 @@ public class LambdaEnclosingInstanceLocalVariable {
 		v.m1();
 	}
 	public static void main(String[] args) {
-		LambdaEnclosingInstanceLocalVariable l = new LambdaEnclosingInstanceLocalVariable();
+		var l = new LambdaEnclosingInstanceLocalVariable();
 		l.m2();
 
 	}

@@ -55,7 +55,7 @@ public class PredicateFunctionalInterface {
 		Predicate<String> swk = name -> name.startsWith("K");
 		String[] names = {"Katrina", "Mallika", "Kareena", "Kajal", "Sunny"};
 		System.out.println("Display names starts with k");
-		for(String name: names){
+		for(var name: names){
 			if(swk.test(name)) System.out.println(name);
 		}	
 		
@@ -63,7 +63,7 @@ public class PredicateFunctionalInterface {
 		String[] names1 = {"Dell","",null,"HP",null,"Apple",""};
 		List<String> newnames1 = new ArrayList<>();
 		System.out.println("Removing null and empty string from string array");
-		for(String name: names1){
+		for(var name: names1){
 			if(en.test(name)) newnames1.add(name);
 		}
 		System.out.println(newnames1);

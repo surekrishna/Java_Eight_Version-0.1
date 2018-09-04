@@ -10,11 +10,11 @@ public class FunctionFunctionalInterface {
 	
 	public static List<Student> populateStudents(){
 		List<Student> stuList = new ArrayList<>();
-		Student s1 = new Student("Bunny", 73);
-		Student s2 = new Student("Sunny", 81);
-		Student s3 = new Student("Nimmy", 64);
-		Student s4 = new Student("Johnny", 31);
-		Student s5 = new Student("Honey", 26);
+		var s1 = new Student("Bunny", 73);
+		var s2 = new Student("Sunny", 81);
+		var s3 = new Student("Nimmy", 64);
+		var s4 = new Student("Johnny", 31);
+		var s5 = new Student("Honey", 26);
 		
 		stuList.add(s1);
 		stuList.add(s2);
@@ -28,11 +28,11 @@ public class FunctionFunctionalInterface {
 	public static List<Employeee> getAllEmployees(){
 		List<Employeee> empList = new ArrayList<>();
 		
-		Employeee e1 = new Employeee("Johnny", 34000);
-		Employeee e2 = new Employeee("Nanny", 87000);
-		Employeee e3 = new Employeee("Rachel", 13000);
-		Employeee e4 = new Employeee("Michel", 23000);
-		Employeee e5 = new Employeee("Linda", 18000);
+		var e1 = new Employeee("Johnny", 34000);
+		var e2 = new Employeee("Nanny", 87000);
+		var e3 = new Employeee("Rachel", 13000);
+		var e4 = new Employeee("Michel", 23000);
+		var e5 = new Employeee("Linda", 18000);
 		
 		empList.add(e1);
 		empList.add(e2);
@@ -111,7 +111,7 @@ public class FunctionFunctionalInterface {
 			return emp;
 		};
 		
-		for(Employeee e: empList){
+		for(var e: empList){
 			aftInc.add(incSal.apply(e));			
 		}
 		System.out.println("Salary After Increment :: ");
@@ -127,7 +127,7 @@ public class FunctionFunctionalInterface {
 		Function<Integer,Integer> cube = number -> number * number * number;
 		System.out.println("andThen() :: "+add.andThen(cube).apply(2));
 		System.out.println("compose() :: "+add.compose(cube).apply(2));
-		Scanner sc = new Scanner(System.in);
+		var sc = new Scanner(System.in);
 		System.out.println("Enter UserName (Min 5 chars):: ");
 		String userName = sc.next();
 		System.out.println("Enter Password :: ");

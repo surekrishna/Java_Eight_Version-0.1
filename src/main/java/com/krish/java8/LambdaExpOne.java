@@ -28,7 +28,7 @@ public class LambdaExpOne {
 				System.out.println("Child thread.");
 			}
 		};		
-		Thread t = new Thread(r);
+		var t = new Thread(r);
 		t.start();
 		for(int i = 0; i < 10; i++){
 			System.out.println("Main thread.");

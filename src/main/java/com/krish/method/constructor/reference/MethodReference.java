@@ -24,7 +24,7 @@ public class MethodReference {
 				System.out.println("Child Thread.");
 			}
 		};
-		Thread t = new Thread(r);
+		var t = new Thread(r);
 		t.start();
 		for(int k = 1; k <= 10; k++){
 			System.out.println("Main Thread.");
@@ -32,7 +32,7 @@ public class MethodReference {
 		System.out.println("Method Reference for creating thread using Runnable :: ");
 		MethodReference mr = new MethodReference();
 		Runnable rm = mr::m3;
-		Thread t1 = new Thread(rm);
+		var t1 = new Thread(rm);
 		t1.run();
 		for(int j = 1; j <= 10; j++){
 			System.out.println("Main Thread.");
